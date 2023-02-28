@@ -26,7 +26,7 @@ public class SuburbService {
 		return this.repositry.findById(id);
 	}
 	
-	public List<Suburb> getSuburbInfo(String postcode) {
+	public List<Suburb> getSuburbInfo(int postcode) {
 		List<Suburb> suburbs = this.repositry.findSuburbByPostcode(postcode);
 		
 		return suburbs;

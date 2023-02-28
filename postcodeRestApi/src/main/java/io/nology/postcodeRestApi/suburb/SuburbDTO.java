@@ -1,17 +1,20 @@
 package io.nology.postcodeRestApi.suburb;
 
+
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
 
 public class SuburbDTO {
-private Long id;
-	
+	private Long id;
+
 	@NotBlank
 	private String suburbName;
 	
-	@NotBlank
-	@Size(min = 4, max = 4, message = "postcode should be 4 digit numbers")
-	private String postcode;
+	@NotNull(message = "Digit value is required")
+	@Range(min=200, max=9999, message="Postcode must be between 200 to 9999")
+	private Integer postcode;
 
 	public Long getId() {
 		return id;
@@ -29,11 +32,11 @@ private Long id;
 		this.suburbName = suburbName;
 	}
 
-	public String getPostcode() {
+	public Integer getPostcode() {
 		return postcode;
 	}
 
-	public void setPostcode(String postcode) {
+	public void setPostcode(Integer postcode) {
 		this.postcode = postcode;
 	}
 }

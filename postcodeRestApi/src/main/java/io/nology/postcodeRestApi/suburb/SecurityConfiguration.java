@@ -17,7 +17,7 @@ public class SecurityConfiguration {
 	public PasswordEncoder encoder() {
 		return new BCryptPasswordEncoder();
 	}
-
+	
 	@Bean
 	public InMemoryUserDetailsManager userDetailsService() {
 		UserDetails user1 = User.builder().username("editor").password(encoder().encode("editor123")).roles("EDITOR")

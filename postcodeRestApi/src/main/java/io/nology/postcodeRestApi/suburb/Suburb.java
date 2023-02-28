@@ -20,13 +20,13 @@ public class Suburb {
 
 	@Column
 	@NotNull
-	private String postcode;
+	private Integer postcode;
 	
 	
 	// default - required for spring
 	public Suburb() {}
 	
-	public Suburb(String suburbName, String postcode) {
+	public Suburb(String suburbName, Integer postcode) {
 		this.suburbName = suburbName;
 		this.postcode = postcode;
 	} 	
@@ -47,11 +47,11 @@ public class Suburb {
 		this.suburbName = suburbName;
 	}
 
-	public String getPostcode() {
+	public Integer getPostcode() {
 		return postcode;
 	}
 
-	public void setPostcode(String postcode) {
+	public void setPostcode(Integer postcode) {
 		this.postcode = postcode;
 	}
 }
