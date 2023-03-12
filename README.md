@@ -2,7 +2,7 @@
 
 ## Project Brief
 
-This project aims to showcase my abilities in developing a backend Java Spring service and a frontend in ReactJS, with a particular focus on implementing an authentication process for multiple levels of users with different access levels.
+This project aims to showcase my abilities in developing a backend Java Spring service and a frontend in ReactJS with TypeScript, with a particular focus on implementing an authentication process for multiple levels of users with different access levels.
 
 ### MVP
 
