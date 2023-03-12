@@ -1,0 +1,45 @@
+#root {
+	text-align: center;
+	max-width: 840px;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	border-radius: 10px;
+	padding: 40px;
+	box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.07);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font-size: 16px;
+	font-weight: 600;
+	color: whitesmoke;
+	background-color: rgb(53, 149, 223);
+	border: none;
+	border-radius: 4px;
+	padding: 10px 30px;
+	cursor: pointer;
+}
+
+input {
+	width: 100%;
+	line-height: 24px;
+	font-size: 18px;
+	min-height: 36px;
+}
+
+.error-message {
+	color: rgb(153, 39, 39);
+}
