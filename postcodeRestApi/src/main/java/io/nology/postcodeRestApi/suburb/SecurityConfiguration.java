@@ -2,6 +2,7 @@ package io.nology.postcodeRestApi.suburb;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -17,7 +18,7 @@ public class SecurityConfiguration {
 	public PasswordEncoder encoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
+
 	@Bean
 	public InMemoryUserDetailsManager userDetailsService() {
 		UserDetails user1 = User.builder().username("editor").password(encoder().encode("editor123")).roles("EDITOR")
@@ -30,10 +31,11 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.csrf().disable()
-				.authorizeHttpRequests(
-						(authz) -> authz.antMatchers("/", "/suburbs").hasAnyRole("EDITOR", "VIEWER")
-								.antMatchers("/suburbs/create").hasRole("EDITOR").anyRequest().authenticated())
+				.authorizeHttpRequests((authz) -> authz.antMatchers("/", "/suburbs").hasAnyRole("EDITOR", "VIEWER")
+						.antMatchers(HttpMethod.OPTIONS, "/suburbs").permitAll().antMatchers("/suburbs/create")
+						.hasRole("EDITOR").anyRequest().authenticated())
 				.httpBasic(Customizer.withDefaults());
+		http.cors(); 
 		return http.build();
 	}
 }

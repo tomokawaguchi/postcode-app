@@ -1,0 +1,15 @@
+.SignupFormSec {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.SignupForm {
+	display: grid;
+}
+
+.LabelInputWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}

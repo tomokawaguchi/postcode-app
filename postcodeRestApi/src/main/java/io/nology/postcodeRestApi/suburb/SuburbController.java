@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173/")
 @RequestMapping("/suburbs")
 @Validated
 @ControllerAdvice
@@ -69,7 +71,7 @@ public class SuburbController {
 		return new ResponseEntity<>(results, HttpStatus.OK);
 	}
 
-	@PreAuthorize("hasRole('EDITOR')")
+//	@PreAuthorize("hasRole('EDITOR')")
 	@PostMapping("/create")
 	public ResponseEntity<Suburb> createSuburbRecord(@RequestBody @Valid SuburbDTO suburbDto) {
 		Suburb result = this.service.createSuburbRecord(suburbDto);
