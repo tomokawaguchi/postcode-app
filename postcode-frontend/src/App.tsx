@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import "./App.css";
 import RegisterSuburbForm from "./components/RegisterSuburbForm/RegisterSuburbForm";

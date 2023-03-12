@@ -5,12 +5,6 @@ interface SearchResultProps {
 	keyword: string;
 }
 
-interface defaultSuburb {
-	id: number;
-	suburbName: string;
-	postcode: number;
-}
-
 const SearchResult = ({ suburbs, keyword }: SearchResultProps) => {
 	return (
 		<section className={styles.SearchResult}>
