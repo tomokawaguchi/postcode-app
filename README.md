@@ -8,7 +8,7 @@ This project aims to showcase my abilities in developing a backend Java Spring s
 
 - Create an API in Java that allows mobile clients to retrieve and add suburb and postcode combinations. You do not have to write the mobile app!
 
-Required to implement:
+**Required to implement:**
 
 - An API that allows mobile clients to retrieve the suburb information by postcode.
 - An API that allows mobile clients to retrieve a postcode given a suburb name
@@ -16,25 +16,25 @@ Required to implement:
 - Some form of persistence (a database)
 - Testing for controller / service layers
 
-Design Considerations
+#### Design Considerations
 
-Best Practice
+**Best Practice**
 
 - Develop with current best practice
 - Design patterns, software architecture, secure coding
 - Libraries, industry standards
 
-Reusability
+**Reusability**
 
 - Is there anything that can be reused in future projects?
 
-Support knowledge sharing
+**Support knowledge sharing**
 
 - Documentation
 - Comments
 - Anything can help with knowledge sharing with the technical team
 
-Development Process and Quality Control
+**Development Process and Quality Control**
 
 - Testing
 
